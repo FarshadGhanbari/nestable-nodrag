@@ -1,6 +1,13 @@
 Nestable
 ========
 
+This is a Fork for my own usage, with custom elements.
+If you encounter any problems with this code, please refer to the Original one by David Bushell or the Fork by ozdemirburak.
+
+========
+
+
+
 Just another fork of Nestable jQuery plugin developed by David Bushell then updated by Ramon Smit who deleted the repository later.
 
 This covers the latest version. Some features may be added in the near future.
@@ -104,6 +111,10 @@ These advanced config options are also available:
 * `json` JSON string used to dynamically generate a Nestable list. This is the same format as the `serialize()` output
 
 ## Change Log
+
+### 24th February 2016
+
+* [t0miii] Added nodrag class to handle element
 
 ### 6th January 2016
 
