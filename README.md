@@ -4,6 +4,9 @@ Nestable
 This is a Fork for my own usage, with custom elements.
 If you encounter any problems with this code, please refer to the Original one by David Bushell or the Fork by ozdemirburak.
 
+changes: no-drag css class now can be added to the handler.
+         dragEnd event added. Used snipets from BeFiveINFO.
+
 ========
 
 
@@ -115,6 +118,7 @@ These advanced config options are also available:
 ### 24th February 2016
 
 * [t0miii] Added nodrag class to handle element
+* [t0miii] Added dragEnd event.
 
 ### 6th January 2016
 
