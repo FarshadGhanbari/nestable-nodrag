@@ -167,10 +167,34 @@
             };
 
             var onEndEvent = function(e) {
-                if(list.dragEl) {
-                    e.preventDefault();
-                    list.dragStop(hasTouch ? e.touches[0] : e);
-                }
+		if (!list.dragEl) return;
+ 		e.preventDefault();
+ 
+ 		var feedback = {abort: false};
+ 
+ 		var item = list.dragEl.find('.'+list.options.itemClass);
+ 		var sourceList = list.el;
+ 		var destinationList = list.dragRootEl;
+ 		var position = list.placeEl.index();
+ 
+ 		destinationList.trigger('beforeDragEnd', [
+ 			item,               // List item
+ 			sourceList,         // Source list
+			destinationList,    // Destination list
+ 			position,           // Position
+ 			feedback
+ 		]);
+ 
+ 		if (feedback.abort) return;
+
+ 		list.dragStop(e.touches ? e.touches[0] : e);
+ 
+		destinationList.trigger('dragEnd', [
+ 			item,               // List item
+ 			sourceList,         // Source list
+			destinationList,    // Destination list
+ 			position            // Position
+ 		]);
             };
 
             if(hasTouch) {
